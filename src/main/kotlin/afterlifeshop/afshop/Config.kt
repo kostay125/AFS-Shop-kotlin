@@ -1,7 +1,7 @@
 package afterlifeshop.afshop
 
-import net.neoforged.fml.config.ModConfig
 import net.neoforged.fml.ModLoadingContext
+import net.neoforged.fml.config.ModConfig
 import net.neoforged.neoforge.common.ModConfigSpec
 
 object Config {

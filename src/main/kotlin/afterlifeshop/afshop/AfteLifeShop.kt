@@ -1,22 +1,24 @@
 package afterlifeshop.afshop
 
+import net.neoforged.bus.api.IEventBus
 import net.neoforged.fml.common.Mod
-import net.neoforged.fml.javafmlmod.FMLJavaModLoadingContext
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent
 
 @Mod(AfteLifeShop.MOD_ID)
-object AfteLifeShop {
-    const val MOD_ID = "aftelifeshop"
+class AfteLifeShop(modEventBus: IEventBus) {
 
     init {
-        // Регистрируем события
-        val bus = FMLJavaModLoadingContext.get().modEventBus
-        bus.addListener(::onClientSetup)
+        // подписка на события
+        modEventBus.addListener(::onClientSetup)
 
-        println("AfteLifeShop мод инициализирован на Kotlin!")
+        println("AfteLifeShop Kotlin мод загружен (NeoForge)!")
     }
 
     private fun onClientSetup(event: FMLClientSetupEvent) {
-        println("Клиентская часть мода AfteLifeShop загружена.")
+        println("Клиентская часть AfteLifeShop инициализирована.")
+    }
+
+    companion object {
+        const val MOD_ID = "aftelifeshop"
     }
 }
