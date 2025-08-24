@@ -10,5 +10,4 @@ object Config {
 
     init {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, spec)
-    }
-}
+    }}
